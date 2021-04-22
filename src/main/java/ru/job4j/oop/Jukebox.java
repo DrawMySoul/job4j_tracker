@@ -15,6 +15,6 @@ public class Jukebox {
 		Jukebox wurlitzer = new Jukebox();
 		wurlitzer.music(1);
 		wurlitzer.music(2);
-		wurlitzer.music(5);
+		wurlitzer.music(6);
 	}
 }
