@@ -8,22 +8,22 @@ public class Library {
 		Book eckel = new Book("Thinking in Java", 1168);
 		Book[] books = {headFirst, schildt, martin, eckel};
 
-		for (int i = 0; i < books.length; i++) {
-			System.out.println(books[i].getName() + " " + books[i].getPages());
+		for (Book book : books) {
+			System.out.println(book.getName() + " " + book.getPages());
 		}
 		Book temp = books[0];
 		books[0] = books[3];
 		books[3] = temp;
 		System.out.println();
 
-		for (int i = 0; i < books.length; i++) {
-			System.out.println(books[i].getName() + " " + books[i].getPages());
+		for (Book book : books) {
+			System.out.println(book.getName() + " " + book.getPages());
 		}
 		System.out.println();
 
-		for (int i = 0; i < books.length; i++) {
-			if ("Clean code".equals(books[i].getName())) {
-				System.out.println(books[i].getName() + " " + books[i].getPages());
+		for (Book book : books) {
+			if ("Clean code".equals(book.getName())) {
+				System.out.println(book.getName() + " " + book.getPages());
 			}
 		}
 	}
