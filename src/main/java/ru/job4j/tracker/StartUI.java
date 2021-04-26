@@ -8,15 +8,17 @@ public class StartUI {
 		while (run) {
 			this.showMenu();
 			System.out.print("Select: ");
-			int select = Integer.valueOf(scanner.nextLine());
+			int select = Integer.parseInt(scanner.nextLine());
 
 			if (select == 0) {
+				System.out.println("User selected: " + select);
 				System.out.println("=== Create a new Item ====");
 				System.out.print("Enter name: ");
 				String name = scanner.nextLine();
 				Item item = new Item(name);
 				tracker.add(item);
 			} else if (select == 1) {
+				System.out.println("User selected: " + select);
 				Item[] allItems = tracker.findAll();
 				System.out.println("=== All items ===");
 				for (Item item : allItems) {
@@ -24,6 +26,7 @@ public class StartUI {
 				}
 				System.out.println("=================");
 			} else if (select == 2) {
+				System.out.println("User selected: " + select);
 				System.out.println("=== What items do you want to change? ===");
 				System.out.print("Enter id: ");
 				int id = Integer.parseInt(scanner.nextLine());
@@ -37,6 +40,7 @@ public class StartUI {
 					System.out.println("=== Failed  ===");
 				}
 			} else if (select == 3) {
+				System.out.println("User selected: " + select);
 				System.out.println("=== Delete item ===");
 				System.out.print("Enter id: ");
 				int id = Integer.parseInt(scanner.nextLine());
@@ -47,6 +51,7 @@ public class StartUI {
 					System.out.println("=== Failed  ===");
 				}
 			} else if (select == 4) {
+				System.out.println("User selected: " + select);
 				System.out.println("=== Find by id ===");
 				System.out.print("Enter id: ");
 				int id = Integer.parseInt(scanner.nextLine());
@@ -58,6 +63,7 @@ public class StartUI {
 					System.out.println("Item with this id was not found");
 				}
 			} else if (select == 5) {
+				System.out.println("User selected: " + select);
 				System.out.println("=== Find by name ===");
 				System.out.print("Enter name: ");
 				String name = scanner.nextLine();
@@ -71,6 +77,7 @@ public class StartUI {
 					System.out.println("Items with this name were not found");
 				}
 			} else if (select == 6) {
+				System.out.println("User selected: " + select);
 				run = false;
 			}
 
@@ -78,14 +85,15 @@ public class StartUI {
 	}
 
 	private void showMenu() {
-		System.out.println("Menu.");
-		System.out.println("0. Add new Item");
-		System.out.println("1. Show all items");
-		System.out.println("2. Edit item");
-		System.out.println("3. Delete item");
-		System.out.println("4. Find item by Id");
-		System.out.println("5. Find items by name");
-		System.out.println("6. Exit Program");
+		String[] menu = {
+			"Add new Item", "Show all items", "Edit item",
+			"Delete item", "Find item by id", "Find items by name",
+			"Exit Program"
+		};
+		System.out.println("Menu:");
+		for (int i = 0; i < menu.length; i++) {
+			System.out.println(i + ". " + menu[i]);
+		}
 	}
 
 	public static void main(String[] args) {
