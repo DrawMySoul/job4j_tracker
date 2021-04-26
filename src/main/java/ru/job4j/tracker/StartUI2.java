@@ -56,6 +56,18 @@ public class StartUI2 {
 				} else {
 					System.out.println("=== Failed  ===");
 				}
+			} else if (select == 4) {
+				System.out.println("User selected: " + select);
+				System.out.println("=== Find by id ===");
+				System.out.print("Enter id: ");
+				int id = Integer.parseInt(scanner.nextLine());
+				Item itemById = tracker.findById(id);
+
+				if (itemById != null) {
+					System.out.println(itemById);
+				} else {
+					System.out.println("Item with this id was not found");
+				}
 			} else if (select == 6) {
 				run = false;
 			}
