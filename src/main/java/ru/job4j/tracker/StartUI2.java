@@ -31,6 +31,20 @@ public class StartUI2 {
 					System.out.println("Storage does not contain any items");
 				}
 				System.out.println("=================");
+			} else if (select == 2) {
+				System.out.println("User selected: " + select);
+				System.out.println("=== What items do you want to change? ===");
+				System.out.print("Enter id: ");
+				int id = Integer.parseInt(scanner.nextLine());
+				System.out.print("Enter new name: ");
+				String name = scanner.nextLine();
+				Item newItem = new Item(name);
+
+				if (tracker.replace(id, newItem)) {
+					System.out.println("=== Successful ===");
+				} else {
+					System.out.println("=== Failed  ===");
+				}
 			} else if (select == 6) {
 				run = false;
 			}
