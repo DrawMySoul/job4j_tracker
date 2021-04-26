@@ -18,6 +18,19 @@ public class StartUI2 {
 				tracker.add(item);
 				System.out.println("Item added: " + item);
 				System.out.println("==========================");
+			} else if (select == 1) {
+				System.out.println("User selected: " + select);
+				Item[] allItems = tracker.findAll();
+				System.out.println("=== Show all items ===");
+
+				if (allItems.length > 0) {
+					for (Item item : allItems) {
+						System.out.println(item);
+					}
+				} else {
+					System.out.println("Storage does not contain any items");
+				}
+				System.out.println("=================");
 			} else if (select == 6) {
 				run = false;
 			}
