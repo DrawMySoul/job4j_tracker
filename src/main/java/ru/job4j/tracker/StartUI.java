@@ -17,6 +17,8 @@ public class StartUI {
 				String name = scanner.nextLine();
 				Item item = new Item(name);
 				tracker.add(item);
+				System.out.println("Item added: " + item);
+				System.out.println("==========================");
 			} else if (select == 1) {
 				System.out.println("User selected: " + select);
 				Item[] allItems = tracker.findAll();
