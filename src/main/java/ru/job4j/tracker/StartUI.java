@@ -11,7 +11,6 @@ public class StartUI {
 			int select = Integer.parseInt(scanner.nextLine());
 
 			if (select == 0) {
-				System.out.println("User selected: " + select);
 				System.out.println("=== Create a new Item ====");
 				System.out.print("Enter name: ");
 				String name = scanner.nextLine();
@@ -20,7 +19,6 @@ public class StartUI {
 				System.out.println("Item added: " + item);
 				System.out.println("==========================");
 			} else if (select == 1) {
-				System.out.println("User selected: " + select);
 				Item[] allItems = tracker.findAll();
 				System.out.println("=== Show all items ===");
 
@@ -33,7 +31,6 @@ public class StartUI {
 				}
 				System.out.println("=================");
 			} else if (select == 2) {
-				System.out.println("User selected: " + select);
 				System.out.println("=== What items do you want to change? ===");
 				System.out.print("Enter id: ");
 				int id = Integer.parseInt(scanner.nextLine());
@@ -47,7 +44,6 @@ public class StartUI {
 					System.out.println("=== Failed  ===");
 				}
 			} else if (select == 3) {
-				System.out.println("User selected: " + select);
 				System.out.println("=== Delete item ===");
 				System.out.print("Enter id: ");
 				int id = Integer.parseInt(scanner.nextLine());
@@ -58,7 +54,6 @@ public class StartUI {
 					System.out.println("=== Failed  ===");
 				}
 			} else if (select == 4) {
-				System.out.println("User selected: " + select);
 				System.out.println("=== Find by id ===");
 				System.out.print("Enter id: ");
 				int id = Integer.parseInt(scanner.nextLine());
@@ -70,7 +65,6 @@ public class StartUI {
 					System.out.println("Item with this id was not found");
 				}
 			} else if (select == 5) {
-				System.out.println("User selected: " + select);
 				System.out.println("=== Find by name ===");
 				System.out.print("Enter name: ");
 				String name = scanner.nextLine();
@@ -84,7 +78,6 @@ public class StartUI {
 					System.out.println("Items with this name were not found");
 				}
 			} else if (select == 6) {
-				System.out.println("User selected: " + select);
 				run = false;
 			}
 
