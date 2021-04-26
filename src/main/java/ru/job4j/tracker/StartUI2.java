@@ -45,6 +45,17 @@ public class StartUI2 {
 				} else {
 					System.out.println("=== Failed  ===");
 				}
+			} else if (select == 3) {
+				System.out.println("User selected: " + select);
+				System.out.println("=== Delete item ===");
+				System.out.print("Enter id: ");
+				int id = Integer.parseInt(scanner.nextLine());
+
+				if (tracker.delete(id)) {
+					System.out.println("=== Successful ===");
+				} else {
+					System.out.println("=== Failed  ===");
+				}
 			} else if (select == 6) {
 				run = false;
 			}
