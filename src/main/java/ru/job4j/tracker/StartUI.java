@@ -52,10 +52,10 @@ public class StartUI {
 				int id = Integer.parseInt(scanner.nextLine());
 				Item itemById = tracker.findById(id);
 
-				if (itemById == null) {
-					System.out.println("Item with this id was not found");
-				} else {
+				if (itemById != null) {
 					System.out.println(itemById);
+				} else {
+					System.out.println("Item with this id was not found");
 				}
 			} else if (select == 5) {
 				System.out.println("=== Find by name ===");
@@ -63,12 +63,12 @@ public class StartUI {
 				String name = scanner.nextLine();
 				Item[] itemsByName = tracker.findByName(name);
 
-				if (itemsByName.length == 0) {
-					System.out.println("Items with this name were not found");
-				} else {
+				if (itemsByName.length != 0) {
 					for (Item item : itemsByName) {
 						System.out.println(item);
 					}
+				} else {
+					System.out.println("Items with this name were not found");
 				}
 			} else if (select == 6) {
 				run = false;
