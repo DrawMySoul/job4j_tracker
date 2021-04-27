@@ -15,16 +15,16 @@ public class ShowAction implements UserAction {
 	@Override
 	public boolean execute(Input input, Tracker tracker) {
 		Item[] allItems = tracker.findAll();
-		System.out.println("=== Show all items ===");
+		out.println("=== Show all items ===");
 
 		if (allItems.length > 0) {
 			for (Item item : allItems) {
-				System.out.println(item);
+				out.println(item);
 			}
 		} else {
-			System.out.println("Storage does not contain any items");
+			out.println("Storage does not contain any items");
 		}
-		System.out.println("=================");
+		out.println("=================");
 		return true;
 	}
 }
