@@ -98,11 +98,11 @@ public class StartUITest {
 		Input input = new StubInput(new String[]{"0", item.getName(), "1"});
 		new StartUI(output).init(input, tracker, actions);
 		assertThat(output.toString(), is(
-			"Menu:" + System.lineSeparator() +  "0. Find items by name"
+			"Menu:" + System.lineSeparator() + "0. Find items by name"
 				+ System.lineSeparator() + "1. Exit Program" + System.lineSeparator() + "=== Find by name ==="
 				+ System.lineSeparator() + item + System.lineSeparator() + "Menu:" + System.lineSeparator()
-				+  "0. Find items by name" + System.lineSeparator() + "1. Exit Program" + System.lineSeparator()
-				));
+				+ "0. Find items by name" + System.lineSeparator() + "1. Exit Program" + System.lineSeparator()
+		));
 	}
 
 	@Test
@@ -125,7 +125,7 @@ public class StartUITest {
 	@Test
 	public void whenInvalidExit() {
 		Output out = new StubOutput();
-		Input in = new StubInput(new String[] {"1", "0"});
+		Input in = new StubInput(new String[]{"1", "0"});
 		Tracker tracker = new Tracker();
 		UserAction[] actions = new UserAction[]{new ExitAction()};
 		new StartUI(out).init(in, tracker, actions);
