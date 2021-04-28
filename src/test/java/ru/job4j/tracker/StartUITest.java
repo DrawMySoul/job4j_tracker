@@ -57,52 +57,52 @@ public class StartUITest {
 
 	@Test
 	public void whenFindAll() {
-		Input input = new StubInput(new String[]{"0", "name1", "1", "2"});
 		Tracker tracker = new Tracker();
+		Item item = tracker.add(new Item("Item"));
 		Output output = new StubOutput();
-		UserAction[] actions = {new CreateAction(output), new ShowAction(output), new ExitAction()};
+		Input input = new StubInput(new String[]{"0", String.valueOf(item.getId())});
+		UserAction[] actions = {new ShowAction(output), new ExitAction()};
 		new StartUI(output).init(input, tracker, actions);
 		assertThat(output.toString(), is(
-			"Menu:" + System.lineSeparator() + "0. Add new Item" + System.lineSeparator()
-				+ "1. Show all items" + System.lineSeparator() + "2. Exit Program" + System.lineSeparator()
-				+ "Menu:" + System.lineSeparator() + "0. Add new Item" + System.lineSeparator()
-				+ "1. Show all items" + System.lineSeparator() + "2. Exit Program" + System.lineSeparator()
-				+ "Menu:" + System.lineSeparator() + "0. Add new Item" + System.lineSeparator()
-				+ "1. Show all items" + System.lineSeparator() + "2. Exit Program" + System.lineSeparator()
+			"Menu:" + System.lineSeparator() + "0. Show all items" + System.lineSeparator()
+				+ "1. Exit Program" + System.lineSeparator() + "=== Show all items ===" + System.lineSeparator()
+				+ item.toString() + System.lineSeparator() + "=================" + System.lineSeparator()
+				+ "Menu:" + System.lineSeparator() + "0. Show all items"
+				+ System.lineSeparator() + "1. Exit Program" + System.lineSeparator()
 		));
 	}
 
 	@Test
 	public void whenFindByID() {
-		Input input = new StubInput(new String[]{"0", "name1", "1", "1", "2"});
 		Tracker tracker = new Tracker();
+		Item item = tracker.add(new Item("Item"));
 		Output output = new StubOutput();
-		UserAction[] actions = {new CreateAction(output), new FindByIDAction(output), new ExitAction()};
+		Input input = new StubInput(new String[]{"0", String.valueOf(item.getId()), "1"});
+		UserAction[] actions = {new FindByIDAction(output), new ExitAction()};
 		new StartUI(output).init(input, tracker, actions);
 		assertThat(output.toString(), is(
-			"Menu:" + System.lineSeparator() + "0. Add new Item"
-				+ System.lineSeparator() + "1. Find item by Id" + System.lineSeparator() + "2. Exit Program"
-				+ System.lineSeparator() + "Menu:" + System.lineSeparator() + "0. Add new Item" + System.lineSeparator()
-				+ "1. Find item by Id" + System.lineSeparator() + "2. Exit Program" + System.lineSeparator()
-				+ "Menu:" + System.lineSeparator() + "0. Add new Item" + System.lineSeparator() + "1. Find item by Id"
-				+ System.lineSeparator() + "2. Exit Program" + System.lineSeparator()));
+			"Menu:" + System.lineSeparator() + "0. Find item by Id" + System.lineSeparator() + "1. Exit Program"
+				+ System.lineSeparator() + "=== Find by id ===" + System.lineSeparator() + item.toString()
+				+ System.lineSeparator() + "Menu:" + System.lineSeparator() + "0. Find item by Id"
+				+ System.lineSeparator() + "1. Exit Program" + System.lineSeparator()
+		));
 
 	}
 
 	@Test
 	public void whenFindByName() {
-		Input input = new StubInput(new String[]{"0", "name1", "1", "name1", "2"});
 		Tracker tracker = new Tracker();
+		Item item = tracker.add(new Item("Item"));
 		Output output = new StubOutput();
-		UserAction[] actions = {new CreateAction(output), new FindByNameAction(output), new ExitAction()};
+		UserAction[] actions = {new FindByNameAction(output), new ExitAction()};
+		Input input = new StubInput(new String[]{"0", item.getName(), "1"});
 		new StartUI(output).init(input, tracker, actions);
 		assertThat(output.toString(), is(
-			"Menu:" + System.lineSeparator() + "0. Add new Item" + System.lineSeparator() + "1. Find items by name"
-				+ System.lineSeparator() + "2. Exit Program" + System.lineSeparator() + "Menu:" + System.lineSeparator()
-				+ "0. Add new Item" + System.lineSeparator() + "1. Find items by name" + System.lineSeparator()
-				+ "2. Exit Program" + System.lineSeparator() + "Menu:" + System.lineSeparator() + "0. Add new Item"
-				+ System.lineSeparator() + "1. Find items by name" + System.lineSeparator()
-				+ "2. Exit Program" + System.lineSeparator()));
+			"Menu:" + System.lineSeparator() +  "0. Find items by name"
+				+ System.lineSeparator() + "1. Exit Program" + System.lineSeparator() + "=== Find by name ==="
+				+ System.lineSeparator() + item.toString() + System.lineSeparator() + "Menu:" + System.lineSeparator()
+				+  "0. Find items by name" + System.lineSeparator() + "1. Exit Program" + System.lineSeparator()
+				));
 	}
 
 	@Test
