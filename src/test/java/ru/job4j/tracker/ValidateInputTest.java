@@ -8,6 +8,7 @@ import ru.job4j.tracker.output.Output;
 import ru.job4j.tracker.output.StubOutput;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.*;
@@ -16,7 +17,7 @@ public class ValidateInputTest {
 	@Test
 	public void whenInvalidInput() {
 		Output out = new StubOutput();
-		ArrayList<String> answer = new ArrayList<>();
+		List<String> answer = new ArrayList<>();
 		answer.add("one");
 		answer.add("1");
 		Input in = new StubInput(answer);
@@ -28,7 +29,7 @@ public class ValidateInputTest {
 	@Test
 	public void whenOneInvalidInput() {
 		Output output = new StubOutput();
-		ArrayList<String> answer = new ArrayList<>();
+		List<String> answer = new ArrayList<>();
 		answer.add("1");
 		Input input = new StubInput(answer);
 		ValidateInput validateInput = new ValidateInput(output, input);
@@ -39,7 +40,7 @@ public class ValidateInputTest {
 	@Test
 	public void whenManyInvalidInput() {
 		Output output = new StubOutput();
-		ArrayList<String> answer = new ArrayList<>();
+		List<String> answer = new ArrayList<>();
 		answer.add("1");
 		answer.add("2");
 		answer.add("3");
@@ -56,7 +57,7 @@ public class ValidateInputTest {
 	@Test
 	public void whenNegativeNumberInput() {
 		Output output = new StubOutput();
-		ArrayList<String> answer = new ArrayList<>();
+		List<String> answer = new ArrayList<>();
 		answer.add("-10");
 		Input input = new StubInput(answer);
 		ValidateInput validateInput = new ValidateInput(output, input);

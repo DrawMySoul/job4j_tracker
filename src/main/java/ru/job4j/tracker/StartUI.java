@@ -44,7 +44,7 @@ public class StartUI {
 		Output output = new ConsoleOutput();
 		Input input = new ValidateInput(output, new ConsoleInput());
 
-		ArrayList<UserAction> actions = new ArrayList<>();
+		List<UserAction> actions = new ArrayList<>();
 		actions.add(new CreateAction(output));
 		actions.add(new ShowAction(output));
 		actions.add(new EditAction(output));
