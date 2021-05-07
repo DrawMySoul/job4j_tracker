@@ -10,8 +10,8 @@ public class UsageMap {
 		users.put("qwerty123@yandex.ru", "Nikolay Nikolaev");
 		users.put("qwerty0000@yandex.ru", "Nikolay Ivanov");
 
-		for (Map.Entry<String, String> user : users.entrySet()) {
-			System.out.println(user.getKey() + " " + user.getValue());
+		for (String key : users.keySet()) {
+			System.out.println(key + " " + users.get(key));
 		}
 	}
 }
