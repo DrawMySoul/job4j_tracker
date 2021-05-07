@@ -17,4 +17,16 @@ public class OrderConvertTest {
 		Map<String, Order> map = OrderConvert.process(orders);
 		assertThat(map.get("3sfe"), is(new Order("3sfe", "Dress")));
 	}
+
+	@Test
+	public void whenSomeOrders() {
+		List<Order> orders = new ArrayList<>();
+		orders.add(new Order("lafd4", "Coffee"));
+		orders.add(new Order("3sfe", "Dress"));
+		orders.add(new Order("3sfe", "Dress"));
+		orders.add(new Order("3sfe", "Dress"));
+		orders.add(new Order("lafd4", "Coffee"));
+		Map<String, Order> map = OrderConvert.process(orders);
+		assertThat(map.size(), is(2));
+	}
 }
