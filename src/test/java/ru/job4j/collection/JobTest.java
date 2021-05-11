@@ -64,7 +64,8 @@ public class JobTest {
 
 	@Test
 	public void chekComparatorDescByNameAndPriority() {
-		Comparator<Job> comparator = new JobDescByName().thenComparing(new JobDescByPriority());
+		Comparator<Job> comparator = new JobDescByName().
+			thenComparing(new JobDescByPriority());
 		int result = comparator.compare(
 			new Job("Impl task", 0),
 			new Job("Fix bug", 1));
@@ -73,7 +74,8 @@ public class JobTest {
 
 	@Test
 	public void checkComparatorDescWhenNamesEquals() {
-		Comparator<Job> comparator = new JobDescByName().thenComparing(new JobDescByPriority());
+		Comparator<Job> comparator = new JobDescByName().
+			thenComparing(new JobDescByPriority());
 		int result = comparator.compare(
 			new Job("Impl task", 0),
 			new Job("Impl task", 1));
@@ -82,7 +84,8 @@ public class JobTest {
 
 	@Test
 	public void checkComparatorAscByNameAndPriority() {
-		Comparator<Job> comparator = new JobAscendingByName().thenComparing(new JobAscendingByPriority());
+		Comparator<Job> comparator = new JobAscendingByName().
+			thenComparing(new JobAscendingByPriority());
 		int result = comparator.compare(
 			new Job("Impl task", 0),
 			new Job("Fix bug", 1));
@@ -91,7 +94,8 @@ public class JobTest {
 
 	@Test
 	public void checkComparatorWhenAscWhenNamesEquals() {
-		Comparator<Job> comparator = new JobAscendingByName().thenComparing(new JobAscendingByPriority());
+		Comparator<Job> comparator = new JobAscendingByName().
+			thenComparing(new JobAscendingByPriority());
 		int result = comparator.compare(
 			new Job("Fix bug", 0),
 			new Job("Fix bug", 1));

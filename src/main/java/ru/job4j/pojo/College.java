@@ -9,6 +9,7 @@ public class College {
 		student.setGroupNumber(123);
 		student.setCrated(new Date());
 
-		System.out.println(student.getFio() + " " + student.getGroupNumber() + " " + student.getCrated());
+		System.out.println(student.getFio() + " "
+			+ student.getGroupNumber() + " " + student.getCrated());
 	}
 }

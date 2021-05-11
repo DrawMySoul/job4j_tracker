@@ -3,7 +3,7 @@ package ru.job4j.tracker.input;
 import java.util.Scanner;
 
 public class ConsoleInput implements Input {
-	Scanner scanner = new Scanner(System.in);
+	private Scanner scanner = new Scanner(System.in);
 
 	@Override
 	public String askStr(String question) {

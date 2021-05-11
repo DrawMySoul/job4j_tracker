@@ -85,12 +85,14 @@ public class StartUITest {
 		actions.add(new ExitAction());
 		new StartUI(output).init(input, tracker, actions);
 		assertThat(output.toString(), is(
-			"Menu:" + System.lineSeparator() + "0. Show all items" + System.lineSeparator()
-				+ "1. Exit Program" + System.lineSeparator() + "=== Show all items ===" + System.lineSeparator()
-				+ item + System.lineSeparator() + "=================" + System.lineSeparator()
+			"Menu:" + System.lineSeparator() + "0. Show all items"
+				+ System.lineSeparator() + "1. Exit Program"
+				+ System.lineSeparator() + "=== Show all items ==="
+				+ System.lineSeparator() + item + System.lineSeparator()
+				+ "=================" + System.lineSeparator()
 				+ "Menu:" + System.lineSeparator() + "0. Show all items"
-				+ System.lineSeparator() + "1. Exit Program" + System.lineSeparator()
-		));
+				+ System.lineSeparator() + "1. Exit Program"
+				+ System.lineSeparator()));
 	}
 
 	@Test
@@ -108,12 +110,13 @@ public class StartUITest {
 		actions.add(new ExitAction());
 		new StartUI(output).init(input, tracker, actions);
 		assertThat(output.toString(), is(
-			"Menu:" + System.lineSeparator() + "0. Find item by Id" + System.lineSeparator() + "1. Exit Program"
-				+ System.lineSeparator() + "=== Find by id ===" + System.lineSeparator() + item
-				+ System.lineSeparator() + "Menu:" + System.lineSeparator() + "0. Find item by Id"
-				+ System.lineSeparator() + "1. Exit Program" + System.lineSeparator()
-		));
-
+			"Menu:" + System.lineSeparator() + "0. Find item by Id"
+				+ System.lineSeparator()
+				+ "1. Exit Program" + System.lineSeparator()
+				+ "=== Find by id ===" + System.lineSeparator() + item
+				+ System.lineSeparator() + "Menu:" + System.lineSeparator()
+				+ "0. Find item by Id" + System.lineSeparator()
+				+ "1. Exit Program" + System.lineSeparator()));
 	}
 
 	@Test
@@ -132,10 +135,12 @@ public class StartUITest {
 		new StartUI(output).init(input, tracker, actions);
 		assertThat(output.toString(), is(
 			"Menu:" + System.lineSeparator() + "0. Find items by name"
-				+ System.lineSeparator() + "1. Exit Program" + System.lineSeparator() + "=== Find by name ==="
-				+ System.lineSeparator() + item + System.lineSeparator() + "Menu:" + System.lineSeparator()
-				+ "0. Find items by name" + System.lineSeparator() + "1. Exit Program" + System.lineSeparator()
-		));
+				+ System.lineSeparator() + "1. Exit Program"
+				+ System.lineSeparator() + "=== Find by name ==="
+				+ System.lineSeparator() + item + System.lineSeparator()
+				+ "Menu:" + System.lineSeparator() + "0. Find items by name"
+				+ System.lineSeparator() + "1. Exit Program"
+				+ System.lineSeparator()));
 	}
 
 	@Test
