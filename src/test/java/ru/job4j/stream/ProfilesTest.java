@@ -15,11 +15,26 @@ public class ProfilesTest {
                 new Profile(new Address("Moscow", "Stalin street", 19, 37))
         );
         List<Address> expected = List.of(
-                new Address("St. Petersburg", "Lenin Street", 19, 17),
-                new Address("Moscow", "Stalin street", 19, 37)
+                new Address("Moscow", "Stalin street", 19, 37),
+                new Address("St. Petersburg", "Lenin Street", 19, 17)
         );
         List<Address> result = Profiles.collect(profiles);
         assertThat(result, is(expected));
     }
 
+    @Test
+    public void whenThereAreDuplicateItems() {
+        List<Profile> profiles = List.of(
+                new Profile(new Address("St. Petersburg", "Lenin Street", 19, 17)),
+                new Profile(new Address("Moscow", "Stalin street", 19, 37)),
+                new Profile(new Address("St. Petersburg", "Lenin Street", 19, 17)),
+                new Profile(new Address("Moscow", "Stalin street", 19, 37))
+        );
+        List<Address> expected = List.of(
+                new Address("Moscow", "Stalin street", 19, 37),
+                new Address("St. Petersburg", "Lenin Street", 19, 17)
+        );
+        List<Address> result = Profiles.collect(profiles);
+        assertThat(result, is(expected));
+    }
 }
