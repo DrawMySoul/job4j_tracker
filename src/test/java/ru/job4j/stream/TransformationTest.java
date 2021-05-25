@@ -24,4 +24,17 @@ public class TransformationTest {
         Map<String, Student> result = Transformation.listToMap(students);
         assertThat(result, is(expected));
     }
+
+    @Test
+    public void checkArrayToList() {
+        Integer[][] array = {
+                {1, 2, 3},
+                {4, 5, 6},
+                {7, 8, 9},
+                {10}
+        };
+        List<Integer> expected = List.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+        List<Integer> result = Transformation.arrToList(array);
+        assertThat(result, is(expected));
+    }
 }
