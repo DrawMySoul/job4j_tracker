@@ -97,4 +97,32 @@ public class Laptop {
             return laptop;
         }
     }
+
+    @Override
+    public String toString() {
+        return "Laptop{" + "company='" + company + '\''
+                + ", model='" + model + '\''
+                + ", motherBoard='" + motherBoard + '\'' + ", processor='"
+                + processor + '\'' + ", ramGB=" + ramGB + ", graphics='"
+                + graphics + '\'' + ", ssd=" + ssd + ", hdd="
+                + hdd + ", os='" + os + '\''
+                + ", screenDiagonal=" + screenDiagonal
+                + ", price=" + price + '}';
+    }
+
+    public static void main(String[] args) {
+        Laptop laptop = new Builder()
+                .buildCompany("Razer")
+                .buildModel("Blade 15 Base Model")
+                .buildMotherBoard("Asus")
+                .buildProcessor("i7-10750H 6 Core (2.6GHz/5.0GHz)")
+                .buildRamGB(16)
+                .buildGraphics("NVIDIA® GeForce GTX 1660 Ti")
+                .buildSSD(true)
+                .buildOS("Windows 10 Home")
+                .buildScreenDiagonal(15.6)
+                .buildPrice(1299.99)
+                .build();
+        System.out.println(laptop);
+    }
 }
