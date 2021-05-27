@@ -10,23 +10,23 @@ import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.*;
 
 public class OrderConvertTest {
-	@Test
-	public void whenSingleOrder() {
-		List<Order> orders = new ArrayList<>();
-		orders.add(new Order("3sfe", "Dress"));
-		Map<String, Order> map = OrderConvert.process(orders);
-		assertThat(map.get("3sfe"), is(new Order("3sfe", "Dress")));
-	}
+    @Test
+    public void whenSingleOrder() {
+        List<Order> orders = List.of(new Order("3sfe", "Dress"));
+        Map<String, Order> map = OrderConvert.process(orders);
+        assertThat(map.get("3sfe"), is(new Order("3sfe", "Dress")));
+    }
 
-	@Test
-	public void whenSomeOrders() {
-		List<Order> orders = new ArrayList<>();
-		orders.add(new Order("lafd4", "Coffee"));
-		orders.add(new Order("3sfe", "Dress"));
-		orders.add(new Order("3sfe", "Dress"));
-		orders.add(new Order("3sfe", "Dress"));
-		orders.add(new Order("lafd4", "Coffee"));
-		Map<String, Order> map = OrderConvert.process(orders);
-		assertThat(map.size(), is(2));
-	}
+    @Test
+    public void whenSomeOrders() {
+        List<Order> orders = List.of(
+                new Order("lafd4", "Coffee"),
+                new Order("3sfe", "Dress"),
+                new Order("3sfe", "Dress"),
+                new Order("3sfe", "Dress"),
+                new Order("lafd4", "Coffee")
+        );
+        Map<String, Order> map = OrderConvert.process(orders);
+        assertThat(map.size(), is(2));
+    }
 }

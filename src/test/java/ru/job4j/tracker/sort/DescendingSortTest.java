@@ -16,7 +16,7 @@ public class DescendingSortTest {
 		Item item = new Item(1, "name4");
 		Item item1 = new Item(1, "name2");
 		List<Item> items = Arrays.asList(item, item1);
-		List<Item> expected = Arrays.asList(item1, item);
+		List<Item> expected = List.of(item1, item);
 		Collections.sort(items, new DescendingSort());
 		assertThat(items, is(expected));
 	}

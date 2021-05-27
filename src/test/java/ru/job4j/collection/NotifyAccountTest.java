@@ -13,33 +13,28 @@ import static org.junit.Assert.*;
 public class NotifyAccountTest {
 	@Test
 	public void sent() {
-		List<Account> accounts = Arrays.asList(
+		List<Account> accounts = List.of(
 			new Account("123", "Petr Arsentev", "eDer3432f"),
 			new Account("142", "Petr Arsentev", "000001")
 		);
-		Set<Account> expect = new HashSet<>(
-			Arrays.asList(
+		Set<Account> expect = Set.of(
 				new Account("123", "Petr Arsentev", "eDer3432f"),
 				new Account("142", "Petr Arsentev", "000001")
-			)
 		);
 		assertThat(NotifyAccount.sent(accounts), is(expect));
 	}
 
 	@Test
 	public void notSent() {
-		List<Account> accounts = Arrays.asList(
+		List<Account> accounts = List.of(
 			new Account("142", "Petr Arsentev", "eDer3432f"),
 			new Account("142", "Petr Arsentev", "000001"),
 			new Account("123", "Michael Jeffrey Jordan", "eDer3432f"),
 			new Account("123", "Michael Jeffrey Jordan", "eDer3432f")
-
 		);
-		Set<Account> expect = new HashSet<>(
-			Arrays.asList(
+		Set<Account> expect = Set.of(
 				new Account("142", "Petr Arsentev", "eDer3432f"),
 				new Account("123", "Michael Jeffrey Jordan", "eDer3432f")
-			)
 		);
 		assertThat(NotifyAccount.sent(accounts), is(expect));
 	}
