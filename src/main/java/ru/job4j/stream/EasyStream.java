@@ -7,15 +7,13 @@ import java.util.function.Predicate;
 
 public class EasyStream {
 	private List<Integer> source;
-	private static EasyStream easyStream;
 
-	public EasyStream(List<Integer> source) {
+	private EasyStream(List<Integer> source) {
 		this.source = source;
 	}
 
 	public static EasyStream of(List<Integer> source) {
-		easyStream = new EasyStream(source);
-		return easyStream;
+		return new EasyStream(source);
 	}
 
 	public EasyStream map(Function<Integer, Integer> fun) {
@@ -24,7 +22,7 @@ public class EasyStream {
 			mappedList.add(fun.apply(value));
 		}
 		source = mappedList;
-		return easyStream;
+		return this;
 	}
 
 	public EasyStream filter(Predicate<Integer> fun) {
@@ -35,10 +33,10 @@ public class EasyStream {
 			}
 		}
 		source = filteredList;
-		return easyStream;
+		return this;
 	}
 
 	public List<Integer> collect() {
-		return source;
+		return new ArrayList<>(source);
 	}
 }
