@@ -55,9 +55,10 @@ public class SqlTracker implements Store, AutoCloseable {
     @Override
     public boolean replace(int id, Item item) {
         boolean result = false;
-        try (PreparedStatement statement = cn.prepareStatement("update item set name = ? where id = ?")) {
+        try (PreparedStatement statement = cn.prepareStatement("update item set name = ?, created = ? where id = ?")) {
             statement.setString(1, item.getName());
-            statement.setInt(2, id);
+            statement.setTimestamp(2, Timestamp.valueOf(LocalDateTime.now()));
+            statement.setInt(3, id);
             result = statement.executeUpdate() > 0;
         } catch (SQLException e) {
             e.printStackTrace();
@@ -112,8 +113,9 @@ public class SqlTracker implements Store, AutoCloseable {
         try (PreparedStatement statement = cn.prepareStatement("select * from item where id = ?")) {
             statement.setInt(1, id);
             ResultSet resultSet = statement.executeQuery();
-            resultSet.next();
-            result = getItem(resultSet);
+            if (resultSet.next()) {
+                result = getItem(resultSet);
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         }
