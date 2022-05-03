@@ -1,0 +1,156 @@
+2022-05-03 10:20:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "DATABASECHANGELOGLOCK" не найдена
+Table "DATABASECHANGELOGLOCK" not found; SQL statement:
+SELECT COUNT(*) FROM DATABASECHANGELOGLOCK [42102-200]
+2022-05-03 10:23:58 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "ITEM" не найдена
+Table "ITEM" not found; SQL statement:
+insert into item(name, created) values(?, ?) [42102-200]
+2022-05-03 10:23:58 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "ITEM" не найдена
+Table "ITEM" not found; SQL statement:
+select * from item where id = ? [42102-200]
+2022-05-03 10:27:26 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "ITEM" не найдена
+Table "ITEM" not found; SQL statement:
+insert into item(name, created) values(?, ?) [42102-200]
+2022-05-03 10:27:26 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "ITEM" не найдена
+Table "ITEM" not found; SQL statement:
+select * from item where id = ? [42102-200]
+2022-05-03 10:27:33 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "ITEM" не найдена
+Table "ITEM" not found; SQL statement:
+insert into item(name, created) values(?, ?) [42102-200]
+2022-05-03 10:27:33 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "ITEM" не найдена
+Table "ITEM" not found; SQL statement:
+select * from item where id = ? [42102-200]
+2022-05-03 10:29:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "ITEM" не найдена
+Table "ITEM" not found; SQL statement:
+insert into item(name, created) values(?, ?) [42102-200]
+2022-05-03 11:06:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "ITEM" не найдена
+Table "ITEM" not found; SQL statement:
+insert into item(name, created) values(?, ?) [42102-200]
+2022-05-03 11:08:01 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "ITEM" не найдена
+Table "ITEM" not found; SQL statement:
+insert into item(name, created) values(?, ?) [42102-200]
+2022-05-03 11:08:01 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "ITEM" не найдена
+Table "ITEM" not found; SQL statement:
+select * from item where id = ? [42102-200]
+2022-05-03 11:22:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "ITEM" не найдена
+Table "ITEM" not found; SQL statement:
+insert into item(name, created) values(?, ?) [42102-200]
+2022-05-03 11:22:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "ITEM" не найдена
+Table "ITEM" not found; SQL statement:
+select * from item where id = ? [42102-200]
+2022-05-03 11:23:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "ITEM" не найдена
+Table "ITEM" not found; SQL statement:
+insert into item(name, created) values(?, ?) [42102-200]
+2022-05-03 11:30:04 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "ITEM" не найдена
+Table "ITEM" not found; SQL statement:
+insert into item(name, created) values(?, ?) [42102-200]
+2022-05-03 11:30:04 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "ITEM" не найдена
+Table "ITEM" not found; SQL statement:
+select * from item where id = ? [42102-200]
+2022-05-03 11:31:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "ITEM" не найдена
+Table "ITEM" not found; SQL statement:
+insert into item(name, created) values(?, ?) [42102-200]
+2022-05-03 11:31:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "ITEM" не найдена
+Table "ITEM" not found; SQL statement:
+select * from item where id = ? [42102-200]
+2022-05-03 11:31:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "ITEM" не найдена
+Table "ITEM" not found; SQL statement:
+insert into item(name, created) values(?, ?) [42102-200]
+2022-05-03 11:31:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "ITEM" не найдена
+Table "ITEM" not found; SQL statement:
+select * from item where id = ? [42102-200]
+2022-05-03 11:50:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "ITEM" не найдена
+Table "ITEM" not found; SQL statement:
+insert into item(name, created) values(?, ?) [42102-200]
+2022-05-03 11:50:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "ITEM" не найдена
+Table "ITEM" not found; SQL statement:
+select * from item where id = ? [42102-200]
+2022-05-03 11:54:50 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "ITEM" не найдена
+Table "ITEM" not found; SQL statement:
+insert into item(name, created) values(?, ?) [42102-200]
+2022-05-03 11:54:50 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "ITEM" не найдена
+Table "ITEM" not found; SQL statement:
+select * from item where id = ? [42102-200]
+2022-05-03 12:00:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "ITEM" не найдена
+Table "ITEM" not found; SQL statement:
+insert into item(name, created) values(?, ?) [42102-200]
+2022-05-03 12:00:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "ITEM" не найдена
+Table "ITEM" not found; SQL statement:
+select * from item where id = ? [42102-200]
+2022-05-03 12:00:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "ITEM" не найдена
+Table "ITEM" not found; SQL statement:
+insert into item(name, created) values(?, ?) [42102-200]
+2022-05-03 12:00:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "ITEM" не найдена
+Table "ITEM" not found; SQL statement:
+select * from item where id = ? [42102-200]
+2022-05-03 12:02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "ITEM" не найдена
+Table "ITEM" not found; SQL statement:
+insert into item(name, created) values(?, ?) [42102-200]
+2022-05-03 12:02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "ITEM" не найдена
+Table "ITEM" not found; SQL statement:
+select * from item where id = ? [42102-200]
+2022-05-03 12:18:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "ITEM" не найдена
+Table "ITEM" not found; SQL statement:
+insert into item(name, created) values(?, ?) [42102-200]
+2022-05-03 12:18:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "ITEM" не найдена
+Table "ITEM" not found; SQL statement:
+select * from item where id = ? [42102-200]
+2022-05-03 13:22:43 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "ITEM" не найдена
+Table "ITEM" not found; SQL statement:
+insert into item(name, created) values(?, ?) [42102-200]
+2022-05-03 13:22:43 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "ITEM" не найдена
+Table "ITEM" not found; SQL statement:
+select * from item where id = ? [42102-200]
+2022-05-03 13:23:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "ITEM" не найдена
+Table "ITEM" not found; SQL statement:
+insert into item(name, created) values(?, ?) [42102-200]
+2022-05-03 13:23:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "ITEM" не найдена
+Table "ITEM" not found; SQL statement:
+select * from item where id = ? [42102-200]
+2022-05-03 13:23:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "AAA" не найдена
+Table "AAA" not found; SQL statement:
+insert into aaa(name, created) values(?, ?) [42102-200]
+2022-05-03 13:23:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "AAA" не найдена
+Table "AAA" not found; SQL statement:
+select * from aaa where id = ? [42102-200]
+2022-05-03 13:41:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "SELECT * FROMS[*] ITEM"
+Syntax error in SQL statement "SELECT * FROMS[*] ITEM"; SQL statement:
+select * froms item [42000-200]
