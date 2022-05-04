@@ -56,15 +56,7 @@ public class SqlTrackerTest {
     }
 
     @Test
-    public void addTest(){
-        SqlTracker tracker = new SqlTracker(connection);
-        Item item = new Item("newItem");
-        tracker.add(item);
-        assertThat(tracker.findById(item.getId()), is(item));
-    }
-
-    @Test
-    public void replaceTest() {
+    public void whenSaveItemAndThenReplaceItNameMustBeTheSame() {
         SqlTracker tracker = new SqlTracker(connection);
         Item item = new Item("newItem");
         tracker.add(item);
@@ -73,7 +65,7 @@ public class SqlTrackerTest {
     }
 
     @Test
-    public void deleteTest() {
+    public void whenSaveItemAndDeleteThenMustBeNull() {
         SqlTracker tracker = new SqlTracker(connection);
         Item item = new Item("newItem");
         tracker.add(item);
@@ -82,17 +74,17 @@ public class SqlTrackerTest {
     }
 
     @Test
-    public void findAllTest() {
+    public void whenSaveItemsAndFindAllThenMustBeTheSameList() {
         SqlTracker tracker = new SqlTracker(connection);
         List<Item> expected = List.of(new Item("item1"), new Item("item2"));
-        for (Item item :expected) {
+        for (Item item : expected) {
             tracker.add(item);
         }
         assertThat(tracker.findAll(), is(expected));
     }
 
     @Test
-    public void findByNameTest() {
+    public void whenSaveItemAndFindByNameThenMustBeTheSameList() {
         SqlTracker tracker = new SqlTracker(connection);
         Item item = new Item("newItem");
         tracker.add(item);
@@ -100,7 +92,7 @@ public class SqlTrackerTest {
     }
 
     @Test
-    public void findByIdTest() {
+    public void whenSaveItemAndFindByIdThenMustBeTheSameId() {
         SqlTracker tracker = new SqlTracker(connection);
         Item item = new Item("newItem");
         tracker.add(item);
