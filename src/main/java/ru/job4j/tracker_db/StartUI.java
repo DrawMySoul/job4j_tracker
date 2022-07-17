@@ -6,6 +6,7 @@ import ru.job4j.tracker_db.input.Input;
 import ru.job4j.tracker_db.input.ValidateInput;
 import ru.job4j.tracker_db.output.ConsoleOutput;
 import ru.job4j.tracker_db.output.Output;
+import ru.job4j.tracker_db.store.MemTracker;
 
 import java.util.List;
 
@@ -30,24 +31,22 @@ public class StartUI {
 
 
     public static void main(String[] args) {
-        Input input = new ValidateInput(
+        Input validate = new ValidateInput(
             new ConsoleInput()
         );
         Output output = new ConsoleOutput();
-        try (SqlTracker tracker = new SqlTracker()) {
-            tracker.init();
-            List<UserAction> actions = List.of(
-                new CreateAction(output),
-                new ReplaceAction(output),
-                new DeleteAction(output),
-                new FindAllAction(output),
-                new FindByIdAction(output),
-                new FindByNameAction(output),
-                new ExitAction()
-            );
-            new StartUI().init(input, tracker, actions);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        List<UserAction> actions = List.of(
+            new CreateAction(output),
+            new ReplaceAction(output),
+            new DeleteAction(output),
+            new FindAllAction(output),
+            new FindByIdAction(output),
+            new FindByNameAction(output),
+            new CreateMultiAction(output),
+            new DeleteMultiAction(output),
+            new ExitAction()
+        );
+        MemTracker tracker = new MemTracker();
+        new StartUI().init(validate, tracker, actions);
     }
 }

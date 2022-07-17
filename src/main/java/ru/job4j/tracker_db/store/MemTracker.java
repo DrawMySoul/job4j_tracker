@@ -1,10 +1,11 @@
 package ru.job4j.tracker_db.store;
 
+import ru.job4j.tracker_db.Store;
 import ru.job4j.tracker_db.model.Item;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MemTracker {
+public class MemTracker implements Store {
 
     private final List<Item> items = new ArrayList<>();
 
